@@ -5,6 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: linear-gradient(to right, #3562e9, rgb(0, 166, 255));
+      margin-top: 80px;
+    }
+   
+    input {
+      padding: 8px;
+      font-size: 16px;
+      width: 150px;
+    }
+    button {
+      padding: 8px 15px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .msg {
+      font-size: 18px;
+      margin-top: 15px;
+      color: #333;
+    }
+    .score {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -22,6 +58,7 @@
         var score = document.querySelector(".score")
         let res = 10
         var random = Math.floor(Math.random() * 10) + 1
+        // var Checkbtn= document.querySelector("button");
         function guess() {
             var inputvalue = Number(input.value)
 
@@ -34,6 +71,8 @@
                 msg.textContent = "✅You are correct!"
                 score.innerText = res;
                 document.querySelector("button").disabled = true;
+                document.querySelector("button").style.background = "grey";
+                
 
             }
             else {
